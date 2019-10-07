@@ -3,15 +3,62 @@
 # 2019
 
 while True:
-    # Insere o número que deve ser multiplicado de 0 até 10
-    n = int(input('Número: '))
-
     print('='*18)
-
-    # Multiplica o número inserido por 0 até 10
-    for vez in range(11):
-        # Mostra o resultado
-        print('{} x {} = {}'.format(n, vez, n * vez))
+    
+    print('(0) - Sair')
+    print('(1) - Soma')
+    print('(2) - Subtração')
+    print('(3) - Multiplicação')
+    print('(4) - Divisão')
+    
+    print('='*18)
+    
+    valor = int(input('Resposta: '))
+    
+    print('='*18)
+    
+    # Encerra
+    if (valor == 0):
+        print('Saindo...')
+        exit()
         
-    print('='*18)
-    fim = input('Aperte uma tecla para continuar...')
+    # Soma
+    elif (valor == 1):
+        print('='*18)
+        valor = int(input('Tabuada de soma do número: '))
+        min = int(input('De: '))
+        max = int(input('Até: '))
+        
+        for n in range(max):
+            print('{} + {} = {}'.format(valor, n, (valor + n)))
+
+    # Subtrair
+    elif (valor == 2):
+        print('='*18)
+        valor = int(input('Tabuada de subtração do número: '))
+        min = int(input('De: '))
+        max = int(input('Até: '))
+        
+        for n in range(max):
+            print('{} + {} = {}'.format(valor, n, (valor - n)))
+
+    # Multiplicar
+    elif (valor == 3):
+        print('='*18)
+        valor = int(input('Tabuada de multiplicação do número: '))
+        min = int(input('De: '))
+        max = int(input('Até: '))
+        
+        for n in range(max):
+            print('{} + {} = {}'.format(valor, n, (valor * n)))
+
+    # Dividir
+    elif (valor == 4):
+        print('='*18)
+        valor = int(input('Tabuada de divisão do número: '))
+        min = int(input('De: '))
+        max = int(input('Até: '))
+        
+        for n in range(max):
+            print('{} + {} = {}'.format(valor, n, (valor / n)))
+
